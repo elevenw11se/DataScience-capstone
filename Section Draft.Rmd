@@ -2,7 +2,9 @@
 title: "Section Draft"
 author: "Caleb Mogyabiyedom"
 date: "2025-10-08"
-output: html_document
+output:
+  word_document: default
+  pdf_document: default
 ---
 
 For the past few weeks I have been wrestling with the idea of changing my research topic to one that I can get more information out of and not just a mere regression. Every week, I meet with Professor Kuhlwein to explore different possible ideas that I am interested in and that would also be suitable for a Data Science capstone project. We explored topics ranging from “Factors that Drive the Cedi” to “The Factors Driving Inflation in Ghana.”

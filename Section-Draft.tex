@@ -1,0 +1,102 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Section Draft},
+  pdfauthor={Caleb Mogyabiyedom},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Section Draft}
+\author{Caleb Mogyabiyedom}
+\date{2025-10-08}
+
+\begin{document}
+\maketitle
+
+For the past few weeks I have been wrestling with the idea of changing
+my research topic to one that I can get more information out of and not
+just a mere regression. Every week, I meet with Professor Kuhlwein to
+explore different possible ideas that I am interested in and that would
+also be suitable for a Data Science capstone project. We explored topics
+ranging from ``Factors that Drive the Cedi'' to ``The Factors Driving
+Inflation in Ghana.'' After several discussions, I decided to broaden
+the focus of my project to explore Ghana's key macroeconomic dynamics in
+a more holistic manner. Ghana's economy is characterized by a high
+degree of resource dependence, with gold, cocoa, and oil serving as the
+country's primary export earners. These commodities form the backbone of
+Ghana's foreign exchange inflows and they also significantly influence
+fiscal policy, inflation, and overall economic stability. Even though
+resource wealth offers opportunities for growth and development, it also
+exposes the economy to external shocks arising from volatile global
+commodity prices. The research that I have decided to work on will be an
+exploratory analysis of Ghana's macroeconomic factors, and will focus on
+how variables such as inflation, interest rates, exchange rates, foreign
+reserves, and major export prices interact over time. By examining their
+relationships, the project seeks to uncover patterns that explain
+Ghana's cyclical phases of economic expansion and instability. In
+addition to this, I have been studying some possible regression methods
+like VAR and Granger Causality tests which I will be employing to test
+whether fluctuations in gold prices will have any predictive movements
+on Ghana exchange rates.
+
+\end{document}
