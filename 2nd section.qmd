@@ -1,6 +1,6 @@
 ---
 title: "2nd Section/Introduction"
-format: html
+format: pdf
 editor: visual
 ---
 
