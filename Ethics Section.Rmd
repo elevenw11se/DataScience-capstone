@@ -1,0 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+ETHICS OF EXPLORATORY ANALYSIS OF GHANA’S MACROECONOMIC INDICATORS
+
+The major ethical issue in this project issue is the risk of oversimplifying complex relationships. Even though techniques like VAR and Granger causality are useful for finding patterns and predictive relationships, they can’t always capture the full story behind Ghana’s economic situation. Factors such as political changes, structural inequalities, and the influence of institutions like the IMF often shape outcomes in ways that numbers alone can’t explain. It’s therefore necessary to interpret results carefully and not treat correlation as definite causation. Additionally, a visualization of the economic trends can only tell so much about the state of the economy without including any further analysis or research.
+
+Another important point is sustainability. Ghana’s heavy dependence on gold, cocoa, and oil means the economy is constantly exposed to global price swings. From an ethical standpoint, studying these dynamics should also involve questioning whether the current growth model is fair and sustainable. Diversification and inclusive growth should not just be policy goals, but moral imperatives, because the choices made today affect the opportunities available to future generations.
+
+Lastly, I’ve been mindful of data integrity and transparency throughout this project. Most of my data come from institutions such as the Bank of Ghana, World Bank and the Ghana Statistical Service, and each of these sources has its own reporting methods and potential biases. Being clear about where the data come from, and checking for consistency are all part of doing this research responsibly. My goal has been to make sure that the analysis remains transparent, reproducible, and fair, without overstating what the results actually show. 
