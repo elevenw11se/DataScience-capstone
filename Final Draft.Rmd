@@ -1,0 +1,107 @@
+
+
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+                         AN EXPLORATORY ANALYSIS OF GHANA’S MACROECONOMIC INDICATORS
+
+Ghana’s economy has undergone a lot of transformation since its independence in 1957. Puplampu et al.(2004) states that the economy is extremely reliant on the exportation of natural resources, as a result the economy is easily rattled by external pressures that dictate the prices of these commodities. For most of Ghana’s history, Gold has been the main driver of foreign exchange, followed closely by cocoa and until recently in 2007, oil. With the addition of the revenues generated from this new resource, one would expect that the rise in GDP during this period will perhaps translate into a corresponding increase in the quality of living of the average Ghanaian particularly with respect to inflation(slower rise in commodity prices). But the interactions between the various aspects of the economy is a lot more complex and in some circumstances, the expected results may not follow conventional economic theory at least on the surface level. These abnormalities may be explained by the developing nature of the economy and the relationship of Ghana’s economy with not just the world market, but external bodies like IMF and the World Bank. Ghana first went to the IMF in 1966 following the overthrow of its first president, Dr Kwame Nkrumah, to come in and stabilize the economy. Among the numerous structural interventions by the IMF, one that stands out is the conversion of most state owned enterprises into privately owned firms so they can generate profit, Appiah-Kubi K(2001). Since then the Ghanaian economy has been relying on the IMF through a series of economic bailouts in the 1970s, 1980s,1990s, 2009, 2015 and as recently as 2022. Each IMF intervention comes with economic boosts and costs in the performance of certain aspects of the economy particularly in employment.As the Ghana ActionAid Federation notes, more often than not, the government is instructed to cut costs and with this comes a series of layoffs to government workers. This is especially significant since the government is the biggest employer in Ghana. I hope to uncover these relationships in my analysis and where needed, conduct some regression analysis to better understand these dynamics. With Ghana’s latest trip to the IMF, a lot of that has got to do with the aftermath of the covid-19 pandemic which caused a lot of financial strain to Ghana’s economy with the international prices of oil and cocoa falling. This was offset a bit by the rise in gold prices during this same period but that was not enough to mitigate the rising levels of inflation and unemployment. However, the increase in the price of gold during the pandemic was not just a blip, but rather a sign of things to come. Since 2020, the selling price of gold has almost doubled and along with it, a rejuvenation of the Ghanaian currency, the Cedi. The Cedi has seen a steady appreciation coupled with falling inflation levels. As part of my analysis, I will run a Granger Causality test to verify the claim of whether the rise in gold prices is responsible for the relative stabilization of the cedi. In conclusion, this project is shaping up to be an exploratory analysis of Ghana’s macroeconomic indicators, reflecting the state of the economy at different phases of the nation’s growth. I hope to uncover insights that may be useful not just for understanding Ghana’s economic history, but also for informing future policy decisions.
+
+Data & Methodology: For this project, I took most of my data from the Ghana Statistical Service Databank and the Bank of Ghana website. Since many of the files came in messy and inconsistent monthly formats, I built a cleaning workflow in R to make everything usable. I wrote functions to standardize the different date formats, clean text-based numbers, remove odd symbols, and handle missing values. After that, I converted all the monthly series like inflation, exchange rates, interest rates, money supply, and commodity prices into annual averages and calculated year-over-year changes where needed. These annual series were then merged with already-annual indicators such as GDP, unemployment, and policy rates. Additionally I created Year-Over-Year variables for inflation,foreign exchange, gold prices, GDP level, Monetary supply,Cocoa prices and Oil prices.This was done because YoY transformations highlight rates of change rather than raw levels, making it easier to identify turning points, accelerations, and slowdowns in the economy.The result is a clean and consistent annual dataset for Ghana that I could use for my analysis and Shiny dashboard. Lastly,Granger Causality Test was utilised for this project instead of other forms of regression due to the lead-lag relationships that exist in the data: Granger Causality test is specifically designed to test whether past movements in one variable help predict future movements in another. This makes it well-suited for economic questions such as whether inflation leads policy rate decisions, whether commodity prices influence the exchange rate, or whether monetary variables move ahead of macroeconomic outcomes and by extension making it suitable for this project. 
+
+Discussion: The variable that gives the broadest picture of a nation’s economy is the Gross Domestic Product(GDP), which shows the total amount of production and consumption that goes on in the country. It serves as the first indicator of the health status of the nation’s economy. In every analysis on the dashboard, it will always make sense to have a time series of Ghana’s GDP in the background with which to compare the fluctuations of the other variables. Furthermore, other major indicators like inflation, interest rates, and policy rates tend to follow similar patterns across the years. This is due to the interconnected nature of the economy, and how changes in one variable will inadvertently affect the other. In the years 2009, 2015, and 2022 when the economy was not doing well most likely due to currency depreciation or global commodity shocks, inflation was high around these periods. These periods of high inflation typically means that prices are increasing too fast and people and firms keep on spending(which worsens the situation), therefore the Central Bank, in this case the Bank of Ghana, will increase its monetary policy rate to try and reduce spending in the economy. This increase in policy rate affects the lending habits of banks causing them to also increase their interest rates, mostly slightly higher than the policy rate. This demonstrates that there is a lagging relationship between these variables and users of the dashboard are going to have the opportunity to conduct a Granger Casualty Test on these variables to verify these lags themselves.
+
+
+```{r, echo=FALSE, fig.align='center', out.width="80%"}
+
+
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Inflation Vs Policy Rate.png")
+
+
+
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Inflation vs Interest Rate.png")
+
+
+
+```
+
+
+Furthermore, as stated earlier periods of economic distress in Ghana are mostly triggered by the following; a depreciating currency, global commodity price shocks, and supply shocks (oil, cocoa, gold). This presents an opportunity to use the dashboard to analyse this relationship. However, judging from the trends on the dashboard it is difficult to draw a definite conclusion as the depreciation of the Cedi only coincides with the falling commodity prices during only certain periods and with only certain commodities; For instance the price of cocoa seems to be falling as the cedi depreciates but this relationship is bit more complex for gold. This may be explained by the intrinsic nature of these commodities. Ghana produces most of the world’s cocoa and so when the cedi depreciates it means farmers are able to earn more cedis per dollar. Therefore farmers tend to export more cocoa and this oversupply on the world market leads to falling cocoa prices. [Once again users of the dashboard will have the option to explore this lagging relationship with a Granger Casualty Test.] However the relationship of the Cedi with Gold is more nuanced because gold behaves like global money and not as an agricultural product: Gold prices are not necessarily influenced by the depreciation of the cedi but by big global forces like the strength of the US dollar, global fear or war, or if inflation expectations change. So the relationship becomes unpredictable as the gold market is driven by global investors, not Ghanaian supply. 
+
+```{r, echo=FALSE, fig.align='center', out.width="80%"}
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Foreign Ex Vs Gold.png")
+
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Foreign Exchange Vs Cocoa.png")
+
+
+
+```
+
+
+However, there has been a lot of discourse in the past year, attributing the appreciation of the cedi to the global appreciation in Gold prices. This sentiment was further fuelled by the formation of the Ghana Goldbod, a government entity with the sole right of exporting gold in Ghana and the goal of maximizing foreign exchange inflows and  local gold reserves. Exploring this relationship using a Granger Casualty Test on the dashboard revealed a p-value of 0.1757 indicating that gold doesn’t show clear predictive power for the cedi once you control for the cedi’s own past.
+
+```{r, echo=FALSE, fig.align='center', out.width="80%"}
+
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Gold YOY vs FX YOY.png")
+
+knitr::include_graphics("/home/camg2022/DS projects/Caleb\'s DataScience Capstone/Plot Pics/Gold VS FX Granger Causality.png")
+
+
+
+```
+
+Furthermore, we can explore some superficial effects of IMF policy interventions on the Ghanaian economy by analyzing the unemployment rate, inflation rate and currency strength during the times of these IMF interventions. With the available data we can analyze the economy in 2009, 2015 and 2022 where there were significant IMF interventions(Karimu, 2024). However it is especially hard to observe the effects of these policies as the interventions extend for a large stretch of time and the effects may not be experienced right after. It may be possible to witness some of these effects by extending the lag years but that will not be enough to draw any significant conclusion. 
+
+
+Ethics Section: The major ethical issue in this project issue is the risk of oversimplifying complex relationships. Even though techniques like Granger causality are useful for predictive relationships, they can’t always capture the full story behind Ghana’s economic situation. Factors such as political changes, structural inequalities, and the influence of institutions like the IMF often shape outcomes in ways that numbers alone can’t explain. It’s therefore necessary to interpret results carefully and not treat correlation as definite causation. Additionally, a visualization of the economic trends can only tell so much about the state of the economy without including any further analysis or research. Another important point is sustainability. Ghana’s heavy dependence on gold, cocoa, and oil means the economy is constantly exposed to global price swings. From an ethical standpoint, studying these dynamics should also involve questioning whether the current growth model is fair and sustainable. Diversification and inclusive growth should not just be policy goals, but moral imperatives, because the choices made today affect the opportunities available to future generations. Furthermore, I’ve been mindful of data integrity and transparency throughout this project. Most of my data come from institutions such as the Bank of Ghana and the Ghana Statistical Service, and each of these sources has its own reporting methods and potential biases. Being clear about where the data come from, and checking for consistency are all part of doing this research responsibly. I have also being mindful of the effects of annualizing the data with respect to the interpretation of my results and the types of relationships I can discover.My goal has been to make sure that the analysis remains transparent, reproducible, and fair, without overstating what the results actually show.
+
+Conclusion: In conclusion, this project has shown me just how complex and interconnected Ghana’s macroeconomic environment truly is. What began as an attempt to trace simple relationships like whether gold prices explain movements in the cedi quickly revealed that the economy operates through layers of shocks, constraints, and institutional responses that go far beyond textbook expectations. By cleaning and organizing the data into a consistent annual format, and by constructing Year-Over-Year indicators for key variables, I was able to highlight the turning points, accelerations, and slowdowns that define Ghana’s economic trajectory across different historical periods.At the same time, the periods surrounding IMF interventions underscored the role of structural challenges and external shocks in shaping Ghana’s macroeconomic outcomes. Although it is difficult to isolate the exact impact of each program, the patterns visible in the dashboard reaffirm that these interventions tend to occur during times of fiscal stress, currency instability, and rising inflation.
+
+
+
+
+                                                  BIBLIOGRAPHY
+1) Suale Karimu,
+Ghana and the IMF: Policy shifts, economic bailouts and macroeconomic outcomes,
+Journal of Policy Modeling,
+Volume 46, Issue 6,
+2024,
+Pages 1146-1164,
+ISSN 0161-8938,
+https://doi.org/10.1016/j.jpolmod.2024.07.006.
+(https://www.sciencedirect.com/science/article/pii/S0161893824001200)
+Abstract: Ghana has a long history of engagement with the IMF. Successive governments of Ghana have sought economic bailouts from the IMF due to worsening domestic macroeconomic stability. This paper examines Ghana’s historical engagement with the IMF and the associated macroeconomic outcomes, and offers lessons for economic restructuring and growth beyond the bailouts. The paper explores the common patterns of the key macroeconomic variables and possible latent causal effects. The results reveal intermittent and short-term effects of the IMF programs. The bailouts often have a short-term impact on macroeconomic stability and growth, but the effects are unsustainable in the long term, especially after the IMF program ends.
+Keywords: IMF bailouts; Macroeconomic stability; Economic restructuring; Ghana; Dynamic factor models
+
+
+2) Asamoah, L. A., & Adu, G. (2016). An Empirical Analysis of the Determinants of Interest Rates in Ghana. Journal of African Business, 17(3), 377–396. https://doi.org/10.1080/15228916.2016.1207493  
+
+3) Precious, A. (2020). The effect of monetary policy and inflation on the exchange rate: A case study of Ghana. Journal of Economics and International Finance.
+
+4)Adom, A. Y., & Zogbator, B. E. (2015). An overview of political and economic development in Ghana from 1957-2008. Journal of Emerging Trends in Educational Research and Policy Studies, 6(5), 347-354.
+
+5)Puplampu, B. B. (2004). A political and economic history of Ghana, 1957–2003. In International Businesses and the Challenges of Poverty in the Developing World: Case Studies on Global Responsibilities and Practices (pp. 64-74). London: Palgrave Macmillan UK.
+
+6) Kolavalli, S., & Vigneri, M. (2011). Cocoa in Ghana: Shaping the success of an economy.
+
+7) Myint, H. (1964). The economics of the developing countries.
+
+8) Appiah-Kubi, K. (2001). State-Owned Enterprises and Privatisation in Ghana. The Journal of Modern African Studies, 39(2), 197–229. http://www.jstor.org/stable/3557262 
+
+9) Ghana, A. (2010). Implications of IMF loans and conditionalities on the poor and vulnerable in Ghana. Final Report November.
+
+
+
+
+
+
+
+
+
+
+
+
+
