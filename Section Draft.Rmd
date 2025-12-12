@@ -1,0 +1,12 @@
+---
+title: "Section Draft"
+author: "Caleb Mogyabiyedom"
+date: "2025-10-08"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+For the past few weeks I have been wrestling with the idea of changing my research topic to one that I can get more information out of and not just a mere regression. Every week, I meet with Professor Kuhlwein to explore different possible ideas that I am interested in and that would also be suitable for a Data Science capstone project. We explored topics ranging from “Factors that Drive the Cedi” to “The Factors Driving Inflation in Ghana.”
+After several discussions, I decided to broaden the focus of my project to explore Ghana’s key macroeconomic dynamics in a more holistic manner. Ghana’s economy is characterized by a high degree of resource dependence, with gold, cocoa, and oil serving as the country’s primary export earners. These commodities form the backbone of Ghana’s foreign exchange inflows and they also  significantly influence fiscal policy, inflation, and overall economic stability. Even though resource wealth offers opportunities for growth and development, it also exposes the economy to external shocks arising from volatile global commodity prices. The research  that I have decided to work on will be an  exploratory analysis of Ghana’s macroeconomic factors, and will focus on how variables such as inflation, interest rates, exchange rates, foreign reserves, and major export prices interact over time. By examining their relationships, the project seeks to uncover patterns that explain Ghana’s cyclical phases of economic expansion and instability. 
+In addition to this, I have been studying some possible regression methods like VAR and Granger Causality tests which I will be employing to test whether fluctuations in gold prices will have any predictive movements on Ghana exchange rates.

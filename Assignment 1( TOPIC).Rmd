@@ -1,0 +1,15 @@
+---
+title: "DS Assignment 1"
+author: "Caleb Mogyabiyedom"
+date: "2025-09-03"
+output: html_document
+---
+
+
+
+## topic (5 pts)
+
+In one or two paragraphs, explain the topic of your capstone project. The write-up need not be technical and should be accessible to other data science minors (even if they have not had the same
+course background as you). 
+
+I am analyzing the correlation between the appreciation of the Ghanaian cedi and the rise in gold prices from 2023 to 2025. As one of the world’s top gold exporters, Ghana's economy is closely tied to global demand for gold. I'm particularly interested in whether the recent increase in gold prices has played a role in strengthening the cedi which has appreciated from around 18 cedis per U.S. dollar to about 10 cedis. This project involves collecting and analyzing time-series data on both gold prices and exchange rates, while also accounting for broader economic factors that may influence currency movements, such as inflation, interest rates, and foreign investment. 

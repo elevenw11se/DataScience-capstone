@@ -1,0 +1,51 @@
+---
+title: "2nd Section/Introduction"
+format: pdf
+editor: visual
+---
+
+
+Exploratory Analysis Of Ghana’s Macroeconomic Indicators
+
+Introduction plus Historical Context
+
+Ghana’s economy has undergone a lot of transformation since its independence in 1957. The economy is extremely reliant on the exportation of natural resources, as a result the economy is easily rattled by external pressures that dictate the prices of these commodities. For most of Ghana’s history, Gold has been the main driver of foreign exchange, followed closely by cocoa and until recently in 2007, oil.
+
+ With the addition of the revenues generated from this new resource, one would expect that the rise in GDP during this period will perhaps translate into a corresponding increase in the quality of living of the average Ghanaian particularly with respect to inflation(slower rise in commodity prices). But as I have come to realise along the course of this project, the interactions between the various aspects of the economy is a lot more complex and in some circumstances,  the expected results may not follow conventional economic theory at least on the surface level. These abnormalities may be explained by the developing nature of the economy and the relationship of Ghana’s economy with not just the world market, but external bodies like IMF and the World Bank.
+
+ Ghana first went to the IMF in 1966 following the overthrow of its first president, Dr Kwame Nkrumah, to come in and stabilize the economy. Among the numerous structural interventions by the IMF, one that stands out is the conversion of most state owned enterprises into privately owned firms so they can generate profit. Since then the Ghanaian economy has been relying on the IMF through a series of economic bailouts in the 1970s, 1980s,1990s, 2009, 2015 and as recently as 2022. Each IMF intervention comes with economic boosts and costs in the performance of certain aspects of the economy particularly in employment. More often than not, the government is instructed to cut costs and with this comes a series of layoffs to government workers. This is especially significant since the government is the biggest employer in Ghana. I hope to uncover these relationships in my analysis and where needed, conduct different types of regression analysis to better understand these dynamics. With Ghana’s latest trip to the IMF, a lot of that has got to do with the aftermath of the covid-19 pandemic which caused a lot of financial strain to Ghana’s economy with the international prices of oil and cocoa falling. This was offset a bit by the rise in gold prices during this same period but that was not enough to mitigate the rising levels of inflation and unemployment. 
+
+However, the increase in the price of gold during the pandemic was not just a blip, but rather a sign of things to come. Since 2020, the selling price of gold has almost doubled and along with it, a rejuvenation of the Ghanaian currency, the Cedi. The Cedi has seen a steady appreciation coupled with falling inflation levels. As part of my analysis, I will run a Granger Causality test to verify the claim of whether the rise in gold prices is responsible for the relative stabilization of the cedi. 
+
+In conclusion, this project is shaping up to be an exploratory analysis of Ghana’s macroeconomic indicators, reflecting the state of the economy at different phases of the nation’s growth. I hope to uncover insights that may be useful not just for understanding Ghana’s economic history, but also for informing future policy decisions.
+
+Data & Methodology: 
+Data Sources: Exchange rates, inflation, interest rates, gold/cocoa/oil prices, reserves.(Bank of Ghana, IMF, WorldBank, TradingEconomics)
+Descriptive Trends
+Interactive Display
+Case Study: Gold and the Cedi( Use the VAR/Granger analysis to check for a predictive relationship)
+Discussion: 
+Interactions between variables (inflation and interest, reserves and exchange rate).
+Role of policy interventions (BoG actions, IMF agreements).
+Comparison with other African countries with similar economies(e.g., CFA franc countries, South Africa). 
+Ethics Section: 
+Risks of oversimplification in economic analysis.
+Policy implications: volatility impacts citizens most.
+Ethical obligation to consider long-term sustainability (resource dependence vs. diversification).
+
+
+
+
+
+BIBLIOGRAPHY
+Karimu, S. (2024). Ghana and the IMF: Policy shifts, economic bailouts and macroeconomic outcomes. Journal of Policy Modeling, 46(6), 1146–1164. https://doi.org/10.1016/j.jpolmod.2024.07.006 
+
+Matthew Kwabena Valogo, Emmanuel Duodu, Hadrat Yusif, Samuel Tawiah Baidoo,
+Effect of exchange rate on inflation in the inflation targeting framework: Is the threshold level relevant?, Research in Globalization, Volume 6, 2023, 100119, ISSN 2590-051X, https://doi.org/10.1016/j.resglo.2023.100119.
+
+Adomako, S., Danso, E., Marfo-Yiadom, E., & Koomson, I. (2017). Macroeconomic stability and economic growth in Ghana: Does the IMF program matter? Cogent Economics & Finance, 5(1), 1371701. 
+
+Najimu, A., & Akyea, M. S. (2020). Can gold provide a hedge against inflation and exchange  rate movements in Ghana? International Journal of Innovative Research and Development, 9(9). https://doi.org/10.24940/ijird/2020/v9/i9/sep20070 
+
+Aryeetey, E., & Kanbur, S. M. R. (2017). The economy of Ghana sixty years after independence. Oxford University Press. 
+
