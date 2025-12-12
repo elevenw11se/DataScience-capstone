@@ -1,0 +1,10 @@
+name: ghana_dashboard
+title:
+username: koficaleb
+account: koficaleb
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16277107
+bundleId: 11296915
+url: https://koficaleb.shinyapps.io/ghana_dashboard/
+version: 1
